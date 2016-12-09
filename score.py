@@ -50,7 +50,7 @@ def finding_counts(scores):
 	count = 0
 	w = len(scores)
 	for i in range(0,w):
-		if np.any(scores[i] < min_thres): ###### count -> giving the of similar regions of data1 and data2
+		if np.any(scores[i] < min_thres): ###### count -> giving the detais of similar regions of data1 and data2
  			count+=1 
 	return count
 
@@ -61,7 +61,7 @@ def remove_img(count_arr,img_num, data, size):
 	print "index: ", index
 	for i in index:
 		print "*", img_num[i]
-		os.remove("/home/chandu/Desktop/project: forming collage/database/light_fruits/img"+str(img_num[i])+".pgm")
+		os.remove("/home/chandu/Desktop/project: forming collage/paris_attacks/test1/img"+str(img_num[i])+".png")
 		data = np.delete(data, i, 0)
 		size = np.delete(size, i, 0)
 	img_num = np.delete(img_num, index, 0)
